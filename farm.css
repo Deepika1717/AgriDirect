@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+section {
+    padding: 80px 20px 20px; /* Added padding-top to avoid overlap with the fixed header */
+    background-color: white;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}   
+/* Background Images for Specific Products */
+.apple-bg { background-image: url('images/apple.jpg'); }
+.banana-bg { background-image: url('images/banana.jpg'); }
+.orange-bg { background-image: url('images/orange.jpg'); }
+.strawberry-bg { background-image: url('images/strawberry.jpg'); }
+.tomato-bg { background-image: url('images/tomato.jpg'); }
+.carrot-bg { background-image: url('images/carrot.jpg'); }
+.milk-bg { background-image: url('images/milk.jpg'); }
+.cheese-bg { background-image: url('images/cheese.jpg'); }
+.rice-bg { background-image: url('images/rice.jpg'); }
+.chicken-bg { background-image: url('images/chicken.jpg'); }
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#bgcart{
+	background-image:url("C:\Users\manid\OneDrive\Desktop\AgriDerectweb\cartimage.jpg");
+}

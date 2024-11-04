@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\farm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<style>
+h3{
+font-size:20px;
+}
+body{
+background-color:#B8E2B0;
+}
+</style>
+</head>
+<body bgcolor="#90EE90">
+ <header>
+       <div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+            <a class="navbar-brand" href="#">
+                <img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\logo.jpg" style="height:100px;width:120px;border-radius:50%;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active text-white" href="#login">Login<span class="sr-only">(current)</span></a>
+                    <a class="nav-link active text-white" href="#products">Products</a>
+                    <a class="nav-link active text-white" href="#cart">Cart</a>
+		    <a class="nav-link active text-white" href="#address">Address</a>
+                    <a class="nav-link text-white" href="#checkout" tabindex="-1" aria-disabled="true">Checkout</a>
+                </div>
+            </div>
+        </nav>
+     </div>
+     <div>
+	<img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\AgriDirect_Landscape1.jpeg" style="height:80vh;width:100vw;background-size:cover;text-align:center;color:white;font-weight:bold;">
+     </div>
+  </header>
+    
+    <!-- Login Section -->
+    <section id="login">
+     <div class="d-flex flex-col justify-content-center">
+      <div style="height:40vh;width:40vw;">
+        <h2 style="font-weight:bold;color:green;">Login</h2><br />
+
+        <form onsubmit="return login()">
+            <label for="username" style="font-weight:bold;">Username:</label>
+            <input type="text" id="username" size=40px required><br />
+	    
+            <label for="password" style="font-weight:bold;">Password:</label>
+            <input type="password" id="password"  size=40px required><br />
+
+            <button type="submit" style="font-weight:bold;width:80px;">Login</button>
+        </form>
+        <p id="loginStatus"></p>
+      </div>
+      <div class="shadow">
+	 <img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\AgriDirect_Landscape2.jpeg" style="height:40vh;width:40vw;"/>
+      </div>
+     </div>
+    </section>
+
+  
+    <!-- Products Section -->
+    <section id="products">
+        <h2 style="color:green;font-weight:bold;margin-bottom:10px;">Our Fresh Farm Products</h2><br/>
+        <div class="product-list">
+            <!-- Fruits -->
+            <div class="product apple-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\Apple.jpg"  height=100px width=100px /><h3>Apples</h3><p>Price: $4.00 / kg</p><button onclick="addToCart('Apples', 4)">Add to Cart</button></div>
+            <div class="product banana-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\Banana.jpg" height=80px width=100px /><h3>Bananas</h3><p>Price: $1.20 / kg</p><button onclick="addToCart('Bananas', 1.2)">Add to Cart</button></div>
+            <div class="product orange-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\carrot.jpg"  height=100px width=100px /><h3>Carrot</h3><p>Price: $3.00 / kg</p><button onclick="addToCart('Carrot', 3)">Add to Cart</button></div>
+            <div class="product strawberry-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\strawberries.jpg"  height=80px width=110px /><h3>Strawberry</h3><p>Price: $6.00 / kg</p><button onclick="addToCart('Strawberries', 6)">Add to Cart</button></div>
+
+            <!-- Vegetables -->
+            <div class="product tomato-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\tomato.webp" height=100px width=100px /><h3>Tomato</h3><p>Price: $2.50 / kg</p><button onclick="addToCart('Tomatoes', 2.5)">Add to Cart</button></div>
+            <div class="product carrot-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\rice.jpg" height=100px width=100px /><h3>Rice</h3><p>Price: $2.00 / kg</p><button onclick="addToCart('Rice', 2)">Add to Cart</button></div>
+
+            <!-- Dairy -->
+            <div class="product milk-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\onion.jpg" height=100px width=100px /><h3>Onion</h3><p>Price: $1.50 / kg</p><button onclick="addToCart('Onion', 1.5)">Add to Cart</button></div>
+            <div class="product cheese-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\wheat.avif" height=100px width=100px /><h3>Wheat</h3><p>Price: $5.00 / kg</p><button onclick="addToCart('Wheat', 5)">Add to Cart</button></div>
+            <div class="product milk-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\spinach.jpg" height=70px width=80px /><h3>Spinach</h3><p>Price: $1.50 / kg</p><button onclick="addToCart('Spinach', 1.5)">Add to Cart</button></div>
+            <div class="product cheese-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\Brinjal.webp" height=80px width=80px /><h3>Brinjal</h3><p>Price: $5.00 / kg</p><button onclick="addToCart('Brinjal', 5)">Add to Cart</button></div>
+
+            <!-- Grains -->
+            <div class="product rice-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\cauliflower.jpg" height=80px width=80px /><h3>Cauliflower</h3><p>Price: $2.00 / kg</p><button onclick="addToCart('Cauliflower', 2)">Add to Cart</button></div>
+
+            <!-- Meat -->
+            <div class="product chicken-bg mb-5"><img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\Products\Jeera.webp" height=80px width=80px /><h3>Jeera</h3><p>Price: $7.00 / kg</p><button onclick="addToCart('Jeera', 7)">Add to Cart</button></div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+  
+    <section id="cart">
+	<div class="d-flex flex-col justify-content-center">
+	      <div style="height:50%;width=50%;margin-top:80px;text-align:center;">
+        	<h2>Your Cart</h2>
+        	<ul id="cartItems"></ul>
+        	<h3>Total: $<span id="totalPrice">0</span></h3>
+	      </div>
+	      <div style="height:50%;width=50%">
+		<img src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\cartimage.jpg" height=300px width=300px/>
+	      </div>
+	</div>
+    </section>
+  
+    <!-- Delivery Address Section -->
+    <section id="address">
+        <h2 style="color:green;font-weight:bold;">Delivery Address</h2><br/>
+        <form onsubmit="return saveAddress()">
+            <label for="addressLine" style="font-weight:bold;">Street:</label>
+            <input type="text" id="addressLine" required><br />
+            <label for="city" style="font-weight:bold;">City :</label>
+            <input type="text" id="city" required><br/>
+            <label for="zipCode" style="font-weight:bold;">Zip:</label>
+            <input type="text" id="zipCode" required><br />
+            <button type="submit">Save Address</button>
+        </form>
+        <p id="addressStatus"></p>
+    </section>
+
+    <!-- Checkout Section -->
+    <section id="checkout">
+        <h2 style="color:green;font-weight:bold;">Checkout</h2><br />
+        <button onclick="payOnline()">&nbsp&nbsp&nbsp&nbspPay Online&nbsp&nbsp&nbsp&nbsp</button><br/><br/>
+        <button onclick="payOffline()">Cash on Delivery</button>
+    </section>
+
+    <script src="C:\Users\manid\OneDrive\Desktop\AgriDerectweb\farm.js"></script>
+</body>
+</html>
